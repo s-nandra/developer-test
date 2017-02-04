@@ -20,5 +20,6 @@ namespace OrangeBricks.Web.Controllers.Offers.ViewModels
         public DateTime CreatedAt { get; set; }
         public bool IsPending { get; set; }
         public string Status { get; set; }
+        public int PropertyId { get; set; }
     }
 }

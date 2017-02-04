@@ -7,6 +7,7 @@ using OrangeBricks.Web.Controllers.Property.Builders;
 using OrangeBricks.Web.Controllers.Property.Commands;
 using OrangeBricks.Web.Controllers.Property.ViewModels;
 using OrangeBricks.Web.Models;
+using OrangeBricks.Web.Controllers.Offers.Builders;
 
 namespace OrangeBricks.Web.Controllers.Property
 {
@@ -91,6 +92,19 @@ namespace OrangeBricks.Web.Controllers.Property
             handler.Handle(command);
 
             return RedirectToAction("Index");
+        }
+
+        [OrangeBricksAuthorize(Roles = "Buyer")]
+        public ActionResult MadeOnProperty(int id)
+        {
+            //var builder = new MakeOfferViewModelBuilder(_context);
+            //var viewModel = builder.Build(id);
+            //return View(viewModel);
+
+            var builder = new OffersOnPropertyViewModelBuilder(_context);
+            var viewModel = builder.Build(id);
+
+            return View(viewModel);
         }
     }
 }
