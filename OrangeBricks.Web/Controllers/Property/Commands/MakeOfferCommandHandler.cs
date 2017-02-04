@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using OrangeBricks.Web.Models;
 
 namespace OrangeBricks.Web.Controllers.Property.Commands
@@ -15,14 +16,17 @@ namespace OrangeBricks.Web.Controllers.Property.Commands
 
         public void Handle(MakeOfferCommand command)
         {
-            var property = _context.Properties.Find(command.PropertyId);
+            //var property = _context.Properties.Find(command.PropertyId);
+
+            var property = _context.Properties.FirstOrDefault();
 
             var offer = new Offer
             {
                 Amount = command.Offer,
                 Status = OfferStatus.Pending,
                 CreatedAt = DateTime.Now,
-                UpdatedAt = DateTime.Now
+                UpdatedAt = DateTime.Now,
+                BuyerId = command.BuyerId
             };
 
             if (property.Offers == null)
@@ -34,5 +38,6 @@ namespace OrangeBricks.Web.Controllers.Property.Commands
             
             _context.SaveChanges();
         }
+
     }
 }
