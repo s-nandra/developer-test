@@ -20,6 +20,11 @@ namespace OrangeBricks.Web.Controllers.Property.Commands
 
             var property = _context.Properties.FirstOrDefault();
 
+            if (property.Offers == null)
+            {
+                property.Offers = new List<Offer>();
+            }
+
             var offer = new Offer
             {
                 Amount = command.Offer,
@@ -29,13 +34,8 @@ namespace OrangeBricks.Web.Controllers.Property.Commands
                 BuyerId = command.BuyerId
             };
 
-            if (property.Offers == null)
-            {
-                property.Offers = new List<Offer>();
-            }
-                
             property.Offers.Add(offer);
-            
+
             _context.SaveChanges();
         }
 
