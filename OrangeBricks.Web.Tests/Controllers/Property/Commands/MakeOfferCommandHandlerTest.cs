@@ -3,10 +3,8 @@ using NSubstitute;
 using OrangeBricks.Web.Controllers.Property.Commands;
 using OrangeBricks.Web.Models;
 using System.Data.Entity;
-using OrangeBricks.Web.Tests;
 using System.Collections.Generic;
 using System.Linq;
-using System;
 using OrangeBricks.Web.Tests.Controllers.Property.Builders;
 
 namespace OrangeBricks.Web.Tests.Controllers.Property.Commands
