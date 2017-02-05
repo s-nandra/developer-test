@@ -27,5 +27,8 @@ namespace OrangeBricks.Web.Models
         public bool IsListedForSale { get; set; }
 
         public ICollection<Offer> Offers { get; set; }
+
+        public ICollection<ViewingAppointment> ViewingAppointment { get; set; }
+
     }
 }

@@ -190,6 +190,8 @@
     <Compile Include="Controllers\Property\Commands\ListPropertyCommandHandler.cs" />
     <Compile Include="Controllers\Property\Commands\MakeOfferCommand.cs" />
     <Compile Include="Controllers\Property\Commands\MakeOfferCommandHandler.cs" />
+    <Compile Include="Controllers\Property\Commands\MakeViewingAppointmentCommand.cs" />
+    <Compile Include="Controllers\Property\Commands\MakeViewingAppointmentCommandHandler.cs" />
     <Compile Include="Controllers\Property\PropertyController.cs" />
     <Compile Include="Controllers\Property\ViewModels\CreatePropertyViewModel.cs" />
     <Compile Include="Controllers\Property\ViewModels\MakeOfferViewModel.cs" />
@@ -235,11 +237,12 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
-    <Compile Include="Models\OfferStatus.cs" />
+    <Compile Include="Models\Statuses.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Offer.cs" />
     <Compile Include="Models\Property.cs" />
+    <Compile Include="Models\ViewingAppointment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
