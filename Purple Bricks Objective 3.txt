@@ -1,0 +1,20 @@
+Objective 3
+
+I have elapsed the time given of 2-3 hrs on this assignment, I'd envisage it will take an additional 1-2 hours to complete objective 2.
+
+When creating an application, the emphasis is to create test before writing functionality, a previous application consisted of writing mock data and querying that to write methods and functions. A key was written within the configuration to switch to a database at a later stage and the same tests were compatible with actual data.
+
+I have tried to keep the unit test within the assignment, consistent with the ones already written, following the same convention.
+
+The codebase seems well-written and straight forward to refactor. I have updated the sql connection string as I had a new version. The offerStatus was renamed/refactored to Statuses, as a status flag for viewing appointments could also apply - overall one enumeration file could be created with different method names in which the application can share from. 
+Further refactoring can be done by merging the handlers into one class file, making available different functions.
+
+Also I usually like to place dbcontext, initializer files within the Data directory.
+
+To finish objective 2 I would follow the same path as objective 1. I would setup the ViewingAppointment table within the database, update the model and migrations.
+I would use a calendar control with bootstrap to persist the viewing date time to the table. The seller could then accept/reject or propose a counter date time.
+
+I have also noticed a buyer can make several offers on the property, maybe only 1 offer can be made until its status has been changed by the seller.
+
+Azure.
+In this instance I have not deployed to Azure, recently I have deployed a .net core project to Azure and I faced an issue when publishing direct from Visual studio when it froze due to resource group settings. I have got round this by setting up the publish details on Azure first and then connecting the publish build from VS.
